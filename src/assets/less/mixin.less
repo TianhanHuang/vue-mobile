@@ -1,0 +1,64 @@
+/*公共样式方法 by 黄田汉  2018/08/30*/
+
+// 背景图片地址和大小
+.bis(@url) { 
+	background-image: url(@url);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+// 背景颜色渐变  从左到右
+.bisColor(@leftColor,@rightColor){
+	background: -moz-linear-gradient(left,@leftColor 0%, @rightColor 100%);
+	background: -webkit-gradient(linear, left,right, color-stop(0%,@leftColor),color-stop(100%,@rightColor));
+	background: -webkit-linear-gradient(left, @leftColor 0%, @rightColor 100%);
+	background: -o-linear-gradient(left, @leftColor 0%, @rightColor 100%);
+	background: -ms-linear-gradient(left, @leftColor 0%, @rightColor 100%);
+	background: linear-gradient(to right, @leftColor 0%, @rightColor 100%);
+}
+
+//transform上下左右居中
+.ctt {  
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+//定位上下左右居中
+.ctp(@width, @height) {
+	position: fixed; 
+	top: 50%;
+    left: 50%;
+    margin-top: -@height/2;
+    margin-left: -@width/2;
+}
+//宽高
+.wh(@width, @height){
+	width: @width;
+	height: @height;
+}
+
+//字体大小、行高、字体
+.ft(@size, @line-height) {  
+	font-size: @size;
+	line-height:@line-height;
+}
+
+//字体大小，颜色
+.sc(@size, @color){
+	font-size: @size;
+	color: @color;
+}
+
+//flex 布局和 子元素 对其方式
+.fj(@type: space-between){
+	display: flex;
+	justify-content: @type;
+}
+
+// input提示语 字体颜色
+.ic(@color){
+    input::-webkit-input-placeholder {color:@color}
+    input:-moz-placeholder {color:@color}
+    input::-moz-placeholder {color: @color}
+    input:-ms-input-placeholder { color: @color}
+}

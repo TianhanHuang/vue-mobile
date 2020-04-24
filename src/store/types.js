@@ -1,0 +1,6 @@
+const UPDATE_DIRECTION = 'UPDATE_DIRECTION';
+const TEST = 'TEST';
+export default {
+  UPDATE_DIRECTION,
+  TEST
+}

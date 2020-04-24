@@ -1,0 +1,43 @@
+/*cell*/
+.weui-cell_access .weui-cell__ft:after{width: 10px!important;height: 10px!important;}
+.weui-cells{margin-top: 0!important; font-size: 14px!important;}
+.weui-cell:before{left: 0!important;}
+
+.weui-cell {
+    padding: 10px 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    &:before {
+        /*.setTopLine(@weuiCellBorderColor);*/
+        /*left: @weuiCellGapH;*/
+    }
+    &:first-child {
+        &:before {
+            display: none;
+        }
+    }
+}
+.weui-cell_primary{
+    align-items: flex-start;
+}
+.weui-cell__bd{
+    flex: 1;
+}
+.weui-cell__ft {
+    text-align: right;
+    /*color: @weuiTextColorGray;*/
+}
+.vux-cell-justify {
+  /*height: unit(@weuiCellLineHeight, em);*/
+  &&:after {
+    content: ".";
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    height: 0;
+  }
+}
+
+/*loadmore*/
+.weui-loadmore_line{margin-top: 1.5em!important;}
